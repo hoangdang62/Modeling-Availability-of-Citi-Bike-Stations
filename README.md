@@ -1,0 +1,6 @@
+# Modeling Availability of Citi Bike Stations
+![](https://github.com/hoangdang62/Modeling-Availability-of-Citi-Bike-Stations/blob/main/Animation.gif)
+
+The time frame for the morning was set from 7:00 - 11:00 and for the evening from 15:00 - 19:00, because these are the commute rush hours and thus would have the most activity. Data on the weekends was excluded because people’s commuting patterns are different on weekends. Trips that are longer than 2 hours were also excluded, because the vast majority of the trips took less than 2 hours, and anything beyond that is most likely an error or not for the purpose of commuting. Trips that start and end at the same station and are less than 1 minute were filtered out as well, because these are most likely errors or people changing their mind about biking from that station, which shouldn’t have any impact on the number of available bikes at that station.  
+
+The number of available bikes for each station was modelled as a Markov Chain, from which its stationary distribution, that is, the long-run probability of that particular station having a certain number of bikes, can be calculated. This information gives insight into which stations are often "short" during rush hours in the morning and evening, and thus can help Citi Bike to identify those that should have their capacity changed or where to place new stations.
